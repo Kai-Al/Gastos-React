@@ -1,8 +1,18 @@
+import { GlobalProvider } from "./context/GlobalState";
+import Header from "./components/Header";
+import Balance from "./components/Balance";
+import TransactionForm from "./components/TransactionForm";
+
 function App() {
   return (
-    <div className="App">
-      <h1>My React App!</h1>
-    </div>
+    <GlobalProvider>
+      <div className="App">
+        <Header />
+        <Balance />
+        <TransactionForm />
+        <h1>React Context API</h1>
+      </div>
+    </GlobalProvider>
   );
 }
 
