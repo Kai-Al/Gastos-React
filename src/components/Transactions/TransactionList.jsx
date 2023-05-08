@@ -15,7 +15,7 @@ function TransactionList() {
               deleteTransaction(transaction.id);
             }}
           >
-            Delete
+            <i className="bi bi-trash"></i>
           </button>
         </div>
       ))}

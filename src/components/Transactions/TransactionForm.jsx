@@ -10,9 +10,9 @@ function TransactionForm() {
     e.preventDefault();
     console.log(Description, Amount);
     const newTransaction = {
-        id: window.crypto.randomUUID(),
-        text: Description,
-        amount: +Amount,
+      id: window.crypto.randomUUID(),
+      text: Description,
+      amount: +Amount,
     };
     addTransaction(newTransaction);
   };
@@ -29,7 +29,9 @@ function TransactionForm() {
           placeholder="Enter Amount"
           onChange={(e) => setAmount(e.target.value)}
         />
-        <input type="submit" value="Add Transaction" />
+        <button type="submit">
+          <i className="bi bi-plus-square"></i>
+        </button>
       </form>
     </div>
   );
