@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useGlobalState } from "../context/GlobalState";
+import { useGlobalState } from "../../context/GlobalState";
 
 function TransactionForm() {
   const [Description, setDescription] = useState();
@@ -10,7 +10,7 @@ function TransactionForm() {
     e.preventDefault();
     console.log(Description, Amount);
     const newTransaction = {
-        id: Math.floor(Math.random() * 100000000),
+        id: window.crypto.randomUUID(),
         text: Description,
         amount: +Amount,
     };
